@@ -1,0 +1,31 @@
+>>>>>>>>>>>>>>>> TO DO LIST: <<<<<<<<<<<<<<<<<
+
+
+============ CORE FUNCTIONALITY ============
+- Users 
+- Audio recording
+- Tagging
+- Dream access-restrictions
+
+============ MINOR FUNCTIONALITY ============
+- Public/Private Dreams
+- Friends
+- password lock dreams
+
+============ REFINEMENT ============
+- Geolocation
+- dream & friend comparisons
+
+============ BONUS CONTENT ==============
+- Save to Google Drive
+- Emoticon tagging
+
+============ STYLING ============
+- implement datepicker library
+
+
+============ MAJOR BUGS ============
+- moment("time") is not a function error when adding new dream
+
+
+============ MINOR BUGS ============
