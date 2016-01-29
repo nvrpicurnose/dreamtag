@@ -7,6 +7,7 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 - Tagging [DONE]
 - Dream access-restrictions
 - Detailed Dream
+- styling with ionic (https://github.com/netanelgilad/meteor-ionic-example)
 
 ============ MINOR FUNCTIONALITY ============
 - Public/Private Dreams
@@ -28,6 +29,7 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 
 ============ MAJOR BUGS ============
 - tags component breaks when switching pages
+- locked dreams not showing new locked dreams (broken calender component?)
 
 
 ============ MINOR BUGS ============

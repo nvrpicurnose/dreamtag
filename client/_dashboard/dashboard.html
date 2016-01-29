@@ -1,25 +1,51 @@
-DASHBOARD
+<div class='bar bar-header bar-royal'>
+	<h1 class='title'>Dream Dashboard</h1>
+</div>
 
+<div class='item' style='margin-top:7vh;'>Good Morning, the time now is {{dashboard.currentDream.date}}</div>
 
-<form>
-<div>The current time is: {{dashboard.currentDream.date}}<br/>
-	<input type='text' id='currentDream_title_input' ng-model='dashboard.currentDream.title' placeholder='Title'/><br/><br/>
+<div class='list' style='margin-top:3vh;'>
+	<label class='item item-input item-stacked-label'>
+		<span class="input-label">Dream Title</span>
+		<input type='text' id='currentDream_title_input' ng-model='dashboard.currentDream.title'/>
+	</label>
 
-	<input type='text' id='currentDream_text_input' ng-model='dashboard.currentDream.text' placeholder='Today I dreamed..' style='width:50vw; height:30vh'/><br/><br/>
+	<label class='item item-input item-stacked-label'>
+		<span class="input-label">Memo Pad</span>
+		<input type='text' id='currentDream_text_input' ng-model='dashboard.currentDream.text' style='height:30vh'/><br/><br/>
+	</label>
 
-	TAGS: <input type="text" value="" ng-model='dashboard.currentDream.tags' data-role="tagsinput" style='width:30vw;height:5vh;' />
+	<label class='item item-input item-stacked-label'>
+		<span class="input-label">Tags</span>
+		<input type="text" value="" ng-model='dashboard.currentDream.tags' data-role="tagsinput"  style='min-width:100vw; max-width:100vw;'/>
+	</label>
 
-	<div class="input-group date" data-provide="datepicker">
-	    <input type="text" class="form-control" ng-model='dashboard.currentDream.timeLock'>
-	    <div class="input-group-addon">
-	        <span class="glyphicon glyphicon-th"></span>
-	    </div>
+	<label class='item item-input item-stacked-label'>
+		<span class="input-label">Time Lock Date</span>
+		<div class="input-group date" data-provide="datepicker">
+		    <input type="text" class="form-control" ng-model='dashboard.currentDream.timeLock'>
+		    <div class="input-group-addon">
+		        <span class="glyphicon glyphicon-th"></span>
+		    </div>
+		</div>
+	</label>
+
+	<div class='item item-toggle item-stacked-label'>
+		<b>SET PRIVATE?</b>
+		<label class='toggle toggle-royal'>
+			<input type='checkbox' ng-model='dashboard.currentDream.private' value='checked' />
+			<div class='track'>
+				<div class='handle'></div>
+			</div>
+		</label>
 	</div>
 
-	<input type='checkbox' ng-model='dashboard.currentDream.private' value='checked' />Private?
+	<button class='button button-royal button-block' ng-click='dashboard.addDream()'>ADD TO DREAM VAULT</button>
 
-	<button class='btn btn-success' ng-click='dashboard.addDream()'>ADD</button>
-	<br/>
-	{{dashboard.currentDream}}
+	<div class='card'>
+		<div class='item item-text-wrap'>
+			<b>Your current Dream:</b><br/>
+			{{dashboard.currentDream}}
+		</div>
+	</div>
 </div>
-</form>

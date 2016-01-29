@@ -5,7 +5,7 @@ angular.module('DreamTag').directive('dashboard', function(){
 		controllerAs: 'dashboard',
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);
-
+			this.subscribe('');
 			this.currentDream = {"date":new Date(), "timeLock": new Date()};
 
 			this.addDream = () => {

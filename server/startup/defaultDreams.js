@@ -32,6 +32,38 @@ Meteor.startup(function(){
 				'tags' : "happy, scary, girl, love",
 				'timeLock' : new Date("1970-01-01"),
 				'private' : false
+			},
+			{
+				'title':'When Puppies Invade',
+				'date' : new Date("2015-02-13"),
+				'text' : 'I dreamt that I met the girl of my dreams! She had a kind smile, brownish blonde hair and the cutest cheeks. I swear my heart stopped beating when she looked up at me. <3 The heart doth yearn to be loved back.',
+				'tags' : "happy, scary, girl, love",
+				'timeLock' : new Date("1970-01-01"),
+				'private' : false
+			},
+			{
+				'title':'Roadtrip Across Antartica',
+				'date' : new Date("2015-02-13"),
+				'text' : 'I dreamt that I met the girl of my dreams! She had a kind smile, brownish blonde hair and the cutest cheeks. I swear my heart stopped beating when she looked up at me. <3 The heart doth yearn to be loved back.',
+				'tags' : "happy, scary, girl, love",
+				'timeLock' : new Date("2070-01-01"),
+				'private' : false
+			},
+			{
+				'title':'To be or not to be...',
+				'date' : new Date("2015-02-13"),
+				'text' : 'I dreamt that I met the girl of my dreams! She had a kind smile, brownish blonde hair and the cutest cheeks. I swear my heart stopped beating when she looked up at me. <3 The heart doth yearn to be loved back.',
+				'tags' : "happy, scary, girl, love",
+				'timeLock' : new Date("2070-01-01"),
+				'private' : false
+			},
+			{
+				'title':'What happened to all the chairs??',
+				'date' : new Date("2015-02-13"),
+				'text' : 'I dreamt that I met the girl of my dreams! She had a kind smile, brownish blonde hair and the cutest cheeks. I swear my heart stopped beating when she looked up at me. <3 The heart doth yearn to be loved back.',
+				'tags' : "happy, scary, girl, love",
+				'timeLock' : new Date("2170-01-01"),
+				'private' : false
 			}
 		];
 		for(var i=0; i<demo_dreams.length; i++){

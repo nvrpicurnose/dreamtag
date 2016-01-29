@@ -5,26 +5,20 @@
 <body>
 	<div ng-app='DreamTag'>
 	
-		<ul class="nav nav-tabs col-xs-12">
-			<li class='navtabs col-xs-4'>
-				<a ui-sref='vault'>
-					<span class="glyphicon glyphicon-cloud"></span>
-					&nbsp; Vault
-				</a>
-			</li>
-			<li class='navtabs col-xs-4 col-xs-4'>
-				<a ui-sref='dashboard'>
-					<span class="glyphicon glyphicon-comment"></span>
-					&nbsp; Dream
-				</a>
-			</li>
-			<li class='navtabs col-xs-4'>
-				<a ui-sref='connect'>
-					<span class="glyphicon glyphicon-user"></span>
-					&nbsp; Links
-				</a>
-			</li>
-		</ul>
+		<div class="tabs">
+			<a class='tab-item' ui-sref='vault'>
+				<span class="glyphicon glyphicon-cloud"></span>
+				&nbsp; Vault
+			</a>
+			<a class='tab-item' ui-sref='dashboard'>
+				<span class="glyphicon glyphicon-comment"></span>
+				&nbsp; Dream
+			</a>
+			<a class='tab-item' ui-sref='connect'>
+				<span class="glyphicon glyphicon-user"></span>
+				&nbsp; Friends
+			</a>
+		</div>
 
 		<div class='col-xs-12' ui-view></div>
 	</div>
