@@ -1,0 +1,10 @@
+.dreamlist-item {
+	min-height: 10vh;
+	max-height: 10vh;
+	max-width: 100vw;
+	min-width: 100vw;
+	font-size: 3em;
+}
+
+.dreamlist-actions {
+}

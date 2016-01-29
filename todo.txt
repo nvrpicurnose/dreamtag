@@ -1,11 +1,12 @@
 >>>>>>>>>>>>>>>> TO DO LIST: <<<<<<<<<<<<<<<<<
-
+See live at: http://dreamtag_v0-1-1.meteor.com
 
 ============ CORE FUNCTIONALITY ============
 - Users 
 - Audio recording
-- Tagging
+- Tagging [DONE]
 - Dream access-restrictions
+- Detailed Dream
 
 ============ MINOR FUNCTIONALITY ============
 - Public/Private Dreams
@@ -15,6 +16,7 @@
 ============ REFINEMENT ============
 - Geolocation
 - dream & friend comparisons
+- Add Moment.js for relative time
 
 ============ BONUS CONTENT ==============
 - Save to Google Drive
@@ -25,7 +27,9 @@
 
 
 ============ MAJOR BUGS ============
-- moment("time") is not a function error when adding new dream
+- tags component breaks when switching pages
 
 
 ============ MINOR BUGS ============
+- empty tags after submitting dream
+- delete confirmation popup

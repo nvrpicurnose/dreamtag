@@ -19,5 +19,5 @@ twbs:bootstrap
 angularui:angular-ui-bootstrap
 less
 angularui:angular-ui-router
-momentjs:moment
 ajduke:bootstrap-tagsinput
+rajit:bootstrap3-datepicker

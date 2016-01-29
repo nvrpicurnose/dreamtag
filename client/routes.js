@@ -8,11 +8,15 @@ angular.module("DreamTag")
         })
         .state('vault', {
           url: '/vault',
-          template: '<dream-vault></dream-vault>'
-        })
-        .state('bonds', {
-          url: '/bonds',
-          template: '<friend-land></friend-land>'
+          template: '<vault></vault>'
+          })
+          .state('one-dream', {
+              url: '/vault/:dreamId',
+              template: '<one-dream></one-dream>'
+            })
+        .state('connect', {
+          url: '/connect',
+          template: '<connect></connect>'
         });
 
     $urlRouterProvider.otherwise("/dashboard");

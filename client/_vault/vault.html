@@ -1,1 +1,22 @@
-VAULT
+<div class='col-xs-12'>
+<ul class='list-group'>
+	<li class='list-group-item dreamlist-item' style='background-color:#84e184;'>Unlocked Dreams</li>
+	<li class='list-group-item dreamlist-item' ng-repeat="dream in vault.unlocked_dreams">
+		<div class='col-xs-9'>
+			{{dream.title}}
+		</div>
+		<div class='dreamlist-actions col-xs-3'>
+			<button class='btn btn-danger btn-sml' ng-click='vault.deleteDream(dream)'>Del</button>
+			<button class='btn btn-success' href='/vault/{{dream._id}}'>View</button>
+		</div>
+	</li>
+</ul>
+
+<ul class='list-group'>
+	<li class='list-group-item dreamlist-item' style='background-color:#ff9999;'>Locked Dreams</li>
+	<li class='list-group-item dreamlist-item' ng-repeat='dream in vault.locked_dreams'>
+		<td>{{dream.title}}</td>
+		<td>{{dream.timeLock}}</td>
+	</li>
+</ul>
+</div>

@@ -1,30 +1,23 @@
 DASHBOARD
 
-<br/>
-<table class='table-striped' style='max-width:90vw;'>
-	<tr>
-		<th>Title</th>
-		<th>Text</th>
-		<th>Tags</th>
-		<th></th>
-	</tr>
-	<tr ng-repeat="dream in dashboard.dreamslisting">
-		<td>{{dream.title}}</td>
-		<td>{{dream.text}}</td>
-		<td>{{dream.tags}}</td>
-		<td><button class='btn btn-danger btn-sml' ng-click='dashboard.deleteDream(dream)'>Del</button></td>
-	</tr>
-</table>
-<br/>
-<br/>
-<br/>
 
 <form>
 <div>The current time is: {{dashboard.currentDream.date}}<br/>
 	<input type='text' id='currentDream_title_input' ng-model='dashboard.currentDream.title' placeholder='Title'/><br/><br/>
+
 	<input type='text' id='currentDream_text_input' ng-model='dashboard.currentDream.text' placeholder='Today I dreamed..' style='width:50vw; height:30vh'/><br/><br/>
+
 	TAGS: <input type="text" value="" ng-model='dashboard.currentDream.tags' data-role="tagsinput" style='width:30vw;height:5vh;' />
+
+	<div class="input-group date" data-provide="datepicker">
+	    <input type="text" class="form-control" ng-model='dashboard.currentDream.timeLock'>
+	    <div class="input-group-addon">
+	        <span class="glyphicon glyphicon-th"></span>
+	    </div>
+	</div>
+
 	<input type='checkbox' ng-model='dashboard.currentDream.private' value='checked' />Private?
+
 	<button class='btn btn-success' ng-click='dashboard.addDream()'>ADD</button>
 	<br/>
 	{{dashboard.currentDream}}
