@@ -8,6 +8,6 @@ Dreams.allow({
 		// to edit dream
 	},
 	remove: function(userId, dream){
-		return userId;
+		return userId && dream.owner == userId;
 	}
 });

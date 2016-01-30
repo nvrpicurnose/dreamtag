@@ -4,6 +4,10 @@
 
 <div class='item' style='margin-top:7vh;'>Good Morning, the time now is {{dashboard.currentDream.date}}</div>
 
+<div style='font-size:2em;font-weight:bold;'>
+	<login-buttons ng-show='!dashboard.isLoggedIn'></login-buttons>
+</div>
+
 <div class='list' style='margin-top:3vh;'>
 	<label class='item item-input item-stacked-label'>
 		<span class="input-label">Dream Title</span>
@@ -12,11 +16,11 @@
 
 	<label class='item item-input item-stacked-label'>
 		<span class="input-label">Memo Pad</span>
-		<input type='text' id='currentDream_text_input' ng-model='dashboard.currentDream.text' style='height:30vh'/><br/><br/>
+		<input type='text' id='currentDream_text_input' ng-model='dashboard.currentDream.text' style='height:15vh'/><br/><br/>
 	</label>
 
 	<label class='item item-input item-stacked-label'>
-		<span class="input-label">Tags</span>
+		<span class="input-label">Tags  (comma seperated)</span>
 		<input type="text" value="" ng-model='dashboard.currentDream.tags' data-role="tagsinput"  style='min-width:100vw; max-width:100vw;'/>
 	</label>
 	
@@ -52,7 +56,6 @@
 
 	<button class='button button-royal button-block' ng-show='dashboard.isLoggedIn' ng-click='dashboard.addDream()'>ADD TO DREAM VAULT</button>
 	<button class='button button-royal button-block' ng-show='!dashboard.isLoggedIn' ng-click='dashboard.addDream()'>POST DREAM AS ANONYMOUS</button>
-	<login-buttons ng-show='!dashboard.isLoggedIn'></login-buttons>
 
 	<div class='card'>
 		<div class='item item-text-wrap'>

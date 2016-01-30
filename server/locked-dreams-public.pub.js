@@ -4,6 +4,6 @@ Meteor.publish("locked-dreams-public", function(){
 			{"public":true}, 
 			{"timeLock":{"$gt": new Date()}}
 		]},
-		{title:1, date:1, timeLock:1}
+		{title:1, date:1, timeLock:1, owner:1}
 	);
 });

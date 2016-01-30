@@ -15,8 +15,8 @@ Meteor.startup(function(){
 				'date' : new Date("2016-01-14"),
 				'text' : 'I was getting ready for work and rushed to put on my pants. As I was givng a presentation, I noticed no one was paying attention to me. Suddenly Janice from Accounting burst out in laughter and thats when I realized I had only put on underwear... but no pants.',
 				'tags' : "naked, embarrassed, work, rush",
-				'timeLock' : new Date("2016-09-04"),
-				'public' : false,
+				'timeLock' : new Date("2016-01-30"),
+				'public' : true,
 				'owner': 'Anonymous'
 			},
 			{
@@ -24,7 +24,7 @@ Meteor.startup(function(){
 				'date' : new Date("2015-02-01"),
 				'text' : 'The scariest dream I just had literally woke me up in shivers. I dreamt I was at a bar on Elm St where everyone was super friendly. As I was leaving the bar, a mysterious stranger popped out of nowhere and sat on my chest until last call. No more moonshine for me.',
 				'tags' : "nightmare, scary, alcohol, night terror",
-				'timeLock' : new Date("2999-12-31"),
+				'timeLock' : new Date("2016-02-01"),
 				'public' : true,
 				'owner': 'Anonymous'
 			},
@@ -33,44 +33,26 @@ Meteor.startup(function(){
 				'date' : new Date("2015-02-13"),
 				'text' : 'I dreamt that I met the girl of my dreams! She had a kind smile, brownish blonde hair and the cutest cheeks. I swear my heart stopped beating when she looked up at me. <3 The heart doth yearn to be loved back.',
 				'tags' : "happy, scary, girl, love",
-				'timeLock' : new Date("2016-04-19"),
-				'public' : false,
-				'owner': 'Anonymous'
-			},
-			{
-				'title':'When Puppies Invade',
-				'date' : new Date("2015-02-13"),
-				'text' : 'I dreamt that I met the girl of my dreams! She had a kind smile, brownish blonde hair and the cutest cheeks. I swear my heart stopped beating when she looked up at me. <3 The heart doth yearn to be loved back.',
-				'tags' : "happy, scary, girl, love",
-				'timeLock' : new Date("1970-01-01"),
-				'public' : false,
+				'timeLock' : new Date("2016-02-13"),
+				'public' : true,
 				'owner': 'Anonymous'
 			},
 			{
 				'title':'Roadtrip Across Antartica',
 				'date' : new Date("2015-02-13"),
-				'text' : 'I dreamt that I met the girl of my dreams! She had a kind smile, brownish blonde hair and the cutest cheeks. I swear my heart stopped beating when she looked up at me. <3 The heart doth yearn to be loved back.',
-				'tags' : "happy, scary, girl, love",
-				'timeLock' : new Date("2070-01-01"),
+				'text' : 'Lorem Ipsum blah blah blah',
+				'tags' : "none, test",
+				'timeLock' : new Date("2016-05-01"),
 				'public' : true,
-				'owner': 'Anonymous'
-			},
-			{
-				'title':'To be or not to be...',
-				'date' : new Date("2015-02-13"),
-				'text' : 'I dreamt that I met the girl of my dreams! She had a kind smile, brownish blonde hair and the cutest cheeks. I swear my heart stopped beating when she looked up at me. <3 The heart doth yearn to be loved back.',
-				'tags' : "happy, scary, girl, love",
-				'timeLock' : new Date("2070-01-01"),
-				'public' : false,
 				'owner': 'Anonymous'
 			},
 			{
 				'title':'What happened to all the chairs??',
 				'date' : new Date("2015-02-13"),
-				'text' : 'I dreamt that I met the girl of my dreams! She had a kind smile, brownish blonde hair and the cutest cheeks. I swear my heart stopped beating when she looked up at me. <3 The heart doth yearn to be loved back.',
-				'tags' : "happy, scary, girl, love",
+				'text' : 'Lorem Ipsum blah blah blah',
+				'tags' : "none, test",
 				'timeLock' : new Date("2170-01-01"),
-				'public' : false,
+				'public' : true,
 				'owner': 'Anonymous'
 			}
 		];

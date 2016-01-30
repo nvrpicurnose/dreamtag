@@ -2,7 +2,10 @@
   <h1 class="title">Public Dream Cloud</h1>
 </div>
 <div style='min-height:10vh; max-height:10vh; min-width:100vw; max-width:100vw;'></div>
-<login-buttons></login-buttons>
+
+<div style='font-size:2em;font-weight:bold;'>
+	<login-buttons></login-buttons>
+</div>
 
 <ul class='list'>
 	<li class='item item-divider'>Public Dreams</li>
@@ -11,7 +14,7 @@
 
 		<div class='buttons'>
 			<button class='button button-balanced button-large' ui-sref="publicDream({dreamId: dream._id})">View</button>
-			<button class='button button-calm button-large'>DREAMT &nbsp;  <b><span am-time-ago="dream.date"></span></b></button>
+			<button class='button button-calm button-large'>DREAMT &nbsp;  <b><span am-time-ago="dream.date"></span></b> by {{cloud.getDreamCreator(dream)}}</button>
 		</div>
 	</li>
 </ul>
@@ -21,7 +24,7 @@
 	<li class='item item-button-right' ng-repeat='dream in cloud.locked_dreams_public'>
 		{{dream.title}}
 		<button class='button button-royal button-large'>
-			Unlocked  &nbsp; <b><span am-time-ago="dream.timeLock"></span></b>
+			Unlocked  &nbsp; <b><span am-time-ago="dream.timeLock"></span></b> posted by {{cloud.getDreamCreator(dream)}}
 		</button>
 	</li>
 </ul>

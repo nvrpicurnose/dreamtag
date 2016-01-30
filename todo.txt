@@ -36,3 +36,4 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 - empty tags after submitting dream
 - delete confirmation popup
 - sort dreams by date
+- display dream owner for email vs gmail vs facebook

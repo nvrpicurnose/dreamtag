@@ -8,6 +8,7 @@ angular.module('DreamTag').directive('cloud', function(){
 
 			this.subscribe('locked-dreams-public');
 			this.subscribe('unlocked-dreams-public');
+			this.subscribe('users');
 
 			this.helpers({
 				unlocked_dreams_public: () => {
@@ -31,9 +32,29 @@ angular.module('DreamTag').directive('cloud', function(){
 				},
 				isLoggedIn: () => {
 					return Meteor.userId() !== null;
+				},
+				user: () =>{
+					return Meteor.users.find();
 				}
 			});
 
+			this.getDreamCreator = function(dream){
+		        if (!dream) {
+		          return '';
+		        }
+
+		        let owner = Meteor.users.findOne(dream.owner);
+
+		        if (!owner) {
+		          return 'user';
+		        }
+
+		        if (Meteor.userId() !== null && owner._id === Meteor.userId()) {
+		          return 'me';
+		        }
+
+		        return owner.profile.name;
+		    };
 		}
 	}
 });
