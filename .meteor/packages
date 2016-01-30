@@ -27,3 +27,5 @@ accounts-google
 accounts-ui
 dotansimha:accounts-ui-angular
 accounts-password
+angularutils:pagination
+tmeasday:publish-counts

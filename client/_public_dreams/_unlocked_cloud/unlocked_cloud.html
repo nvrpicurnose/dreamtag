@@ -1,7 +1,7 @@
 
 	<ul class='list'>
 		<li class='item item-divider'>Unlocked Dreams</li>
-		<li class='item item-button-right' ng-repeat="dream in unlockedCloud.unlocked_dreams_public">
+		<li class='item item-button-right' dir-paginate='dream in unlockedCloud.unlocked_dreams_public | itemsPerPage: unlockedCloud.perPage' total-items='unlockedCloud.dreamsCount'>
 			{{dream.title}}
 
 			<div class='buttons'>
@@ -10,3 +10,4 @@
 			</div>
 		</li>
 	</ul>
+	<dir-pagination-controls on-page-change="unlockedCloud.pageChanged(newPageNumber)"></dir-pagination-controls>

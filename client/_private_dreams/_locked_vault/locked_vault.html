@@ -1,7 +1,7 @@
-
+<div ng-show='lockedVault.isLoggedIn'>
 <ul class='list'>
 	<li class='item item-divider'>Locked Dreams</li>
-	<li class='item item-button-right' ng-repeat='dream in lockedVault.locked_dreams_mine'>
+	<li class='item item-button-right' dir-paginate='dream in lockedVault.locked_dreams_mine | itemsPerPage: lockedVault.perPage' total-items='lockedVault.dreamsCount'>
 		{{dream.title}}
 		<button class='button button-dark button-large'>
 			<span class='glyphicon glyphicon-cog'></span>
@@ -11,3 +11,5 @@
 		</button>
 	</li>
 </ul>
+<dir-pagination-controls on-page-change="lockedVault.pageChanged(newPageNumber)"></dir-pagination-controls>
+</div>

@@ -4,6 +4,7 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 ============ CORE FUNCTIONALITY ============
 - Audio recording
 - Detailed Dream
+- reactive search
 - search public dreams by tag
 
 ============ MINOR FUNCTIONALITY ============
@@ -13,7 +14,6 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 ============ REFINEMENT ============
 - Geolocation
 - dream & friend comparisons
-- Pagination of cloud public dreams
 
 ============ BONUS CONTENT ==============
 - Save to Google Drive
@@ -33,7 +33,6 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 - delete confirmation popup
 - sort dreams by date
 - display dream owner for email vs gmail vs facebook
-- timelock doesnt work sometimes for anonymous posters in deployment
 
 ============ COMPLETED ============
 - Dream access-restrictions [DONE]
@@ -41,3 +40,4 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 - Public/Private Dreams [DONE]
 - Users [DONE]
 - Tagging [DONE]
+- Pagination of cloud public dreams [DONE]

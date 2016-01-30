@@ -12,7 +12,7 @@ angular.module('DreamTag').directive('vault', function(){
 				}
 			});
 
-			this.PubPriv_toggle = true;
+			this.PubPriv_toggle = false;
 
 			this.togglePubPriv = (tf) => {
 				this.PubPriv_toggle = tf;

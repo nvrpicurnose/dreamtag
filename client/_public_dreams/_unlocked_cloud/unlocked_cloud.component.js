@@ -6,8 +6,16 @@ angular.module('DreamTag').directive('unlockedCloud', function(){
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);
 
-			this.subscribe('unlocked-dreams-public');
+			this.perPage = 2;
+			this.page = 1;
+
 			this.subscribe('users');
+			this.subscribe('unlocked-dreams-public', () => {
+				return [{
+					limit: parseInt(this.perPage),
+					skip: parseInt((this.getReactively('page') -1)*this.perPage)
+				}]
+			});
 
 			this.helpers({
 				unlocked_dreams_public: () => {
@@ -24,6 +32,9 @@ angular.module('DreamTag').directive('unlockedCloud', function(){
 				},
 				user: () =>{
 					return Meteor.users.find();
+				},
+				dreamsCount: () => {
+					return Counts.get('numberOfDreams');
 				}
 			});
 
@@ -44,6 +55,10 @@ angular.module('DreamTag').directive('unlockedCloud', function(){
 
 		        return owner.profile.name;
 		    };
+
+		    this.pageChanged = (newPage) => {
+		    	this.page = newPage;
+		    }
 		}
 	}
 });

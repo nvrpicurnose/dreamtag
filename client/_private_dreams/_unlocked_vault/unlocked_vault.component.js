@@ -5,7 +5,18 @@ angular.module('DreamTag').directive('unlockedVault', function(){
 		controllerAs: 'unlockedVault',
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);
-			this.subscribe('unlocked-dreams-mine');
+
+			this.perPage = 2;
+			this.page = 1;
+			
+			this.subscribe('unlocked-dreams-mine', ()=>{
+				return [
+					{
+						limit: parseInt(this.perPage),
+						skip: parseInt((this.getReactively('page') -1)*this.perPage)
+					}
+				]
+			});
 
 			this.helpers({
 				unlocked_dreams_mine: () => {
@@ -19,12 +30,19 @@ angular.module('DreamTag').directive('unlockedVault', function(){
 				},
 				isLoggedIn: () => {
 					return Meteor.userId() !== null;
+				},
+				dreamsCount: () => {
+					return Counts.get('numberOfDreams');
 				}
 			});
 
 			this.deleteDream = (dream)=>{
 				Dreams.remove({_id: dream._id});
 			};
+
+			this.pageChanged = (newPage) => {
+		    	this.page = newPage;
+		    }
 		}
 	}
 });

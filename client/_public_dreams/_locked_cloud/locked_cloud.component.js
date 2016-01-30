@@ -6,8 +6,22 @@ angular.module('DreamTag').directive('lockedCloud', function(){
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);
 
-			this.subscribe('locked-dreams-public');
+			this.perPage = 2;
+			this.page = 1;
+
 			this.subscribe('users');
+			this.subscribe('locked-dreams-public', () => {
+				return [
+					{
+						title:1, 
+						date:1, 
+						timeLock:1, 
+						owner:1,
+						limit: parseInt(this.perPage),
+						skip: parseInt((this.getReactively('page') -1)*this.perPage)
+					}
+				]
+			});
 
 			this.helpers({
 				locked_dreams_public: () => {
@@ -16,7 +30,7 @@ angular.module('DreamTag').directive('lockedCloud', function(){
 							{"timeLock":{"$gt": new Date()}}, 
 							{"public":true}
 						]},
-						{sort: {date:-1}}
+						{date:-1}
 					);
 				},
 				isLoggedIn: () => {
@@ -24,6 +38,9 @@ angular.module('DreamTag').directive('lockedCloud', function(){
 				},
 				user: () =>{
 					return Meteor.users.find();
+				},
+				dreamsCount: () => {
+					return Counts.get('numberOfDreams');
 				}
 			});
 
@@ -44,6 +61,10 @@ angular.module('DreamTag').directive('lockedCloud', function(){
 
 		        return owner.profile.name;
 		    };
+
+		    this.pageChanged = (newPage) => {
+		    	this.page = newPage;
+		    }
 		}
 	}
 });
