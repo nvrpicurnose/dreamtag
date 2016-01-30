@@ -18,9 +18,9 @@ angular.module("DreamTag")
           url: '/cloud',
           template: '<cloud></cloud>'
         })
-          .state('publicDream', {
+          .state('twoDream', {
               url: '/cloud/:dreamId',
-              template: '<public-Dream></public-Dream>'
+              template: '<two-Dream></two-Dream>'
             });
 
     $urlRouterProvider.otherwise("/dashboard");

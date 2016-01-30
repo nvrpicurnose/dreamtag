@@ -1,8 +1,8 @@
-angular.module('DreamTag').directive('publicDream', function(){
+angular.module('DreamTag').directive('twoDream', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'client/_publicDream/publicDream.html',
-		controllerAs: 'publicDream',
+		templateUrl: 'client/_public_dreams/_twoDream/twoDream.html',
+		controllerAs: 'twoDream',
 		controller: function($scope, $reactive, $stateParams){
 			$reactive(this).attach($scope);
 			this.subscribe('locked-dreams-public');

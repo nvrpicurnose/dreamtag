@@ -1,0 +1,13 @@
+
+<ul class='list'>
+	<li class='item item-divider'>Locked Dreams</li>
+	<li class='item item-button-right' ng-repeat='dream in lockedVault.locked_dreams_mine'>
+		{{dream.title}}
+		<button class='button button-dark button-large'>
+			<span class='glyphicon glyphicon-cog'></span>
+		</button>
+		<button class='button button-royal button-large'>
+			Unlocked  &nbsp; <b><span am-time-ago="dream.timeLock"></span></b>
+		</button>
+	</li>
+</ul>

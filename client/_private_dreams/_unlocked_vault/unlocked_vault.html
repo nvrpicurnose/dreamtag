@@ -1,0 +1,13 @@
+
+<ul class='list'>
+	<li class='item item-divider'>Unlocked Dreams</li>
+	<li class='item item-button-right' ng-repeat="dream in unlockedVault.unlocked_dreams_mine">
+		{{dream.title}}
+
+		<div class='buttons'>
+			<button class='button button-balanced button-large' ui-sref="oneDream({dreamId: dream._id})">View</button>
+			<button class='button button-assertive button-large' ng-click='unlockedVault.deleteDream(dream)' ng-show='unlockedVault.isLoggedIn'><span class='glyphicon glyphicon-trash'></span></button>
+			<button class='button button-calm button-large'>DREAMT &nbsp;  <b><span am-time-ago="dream.date"></span></b></button>
+		</div>
+	</li>
+</ul>

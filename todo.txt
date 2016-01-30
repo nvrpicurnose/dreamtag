@@ -2,22 +2,18 @@
 See live at: http://dreamtag_v0-1-1.meteor.com
 
 ============ CORE FUNCTIONALITY ============
-- Users [DONE]
 - Audio recording
-- Tagging [DONE]
-- Dream access-restrictions [DONE]
 - Detailed Dream
-- styling with ionic (https://github.com/netanelgilad/meteor-ionic-example)
+- search public dreams by tag
 
 ============ MINOR FUNCTIONALITY ============
-- Public/Private Dreams [DONE]
-- Friends [DONE]
+- Friends 
 - password lock dreams
 
 ============ REFINEMENT ============
 - Geolocation
 - dream & friend comparisons
-- Add Moment.js for relative time [DONE]
+- Pagination of cloud public dreams
 
 ============ BONUS CONTENT ==============
 - Save to Google Drive
@@ -37,3 +33,10 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 - delete confirmation popup
 - sort dreams by date
 - display dream owner for email vs gmail vs facebook
+
+============ COMPLETED ============
+- Dream access-restrictions [DONE]
+- Add Moment.js for relative time [DONE]
+- Public/Private Dreams [DONE]
+- Users [DONE]
+- Tagging [DONE]

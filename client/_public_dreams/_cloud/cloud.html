@@ -1,0 +1,16 @@
+<div class="bar bar-header bar-balanced">
+  <h1 class="title">Public Dream Cloud</h1>
+</div>
+<div style='min-height:10vh; max-height:10vh; min-width:100vw; max-width:100vw;'></div>
+
+<div style='font-size:2em;font-weight:bold;'>
+	<login-buttons></login-buttons>
+</div>
+
+<div class='publicprivatebuttons'>
+	<button class='button button-balanced' ng-click='cloud.togglePubPriv(false)'>SHOW PUBLIC UNLOCKED</button>
+	<button class='button button-dark' ng-click='cloud.togglePubPriv(true)'>SHOW PUBLIC LOCKED</button>
+</div>
+
+<unlocked-cloud ng-show='!cloud.PubPriv_toggle'></unlocked-cloud>
+<locked-cloud ng-show='cloud.PubPriv_toggle'></locked-cloud>
