@@ -14,12 +14,12 @@ angular.module("DreamTag")
               url: '/vault/:dreamId',
               template: '<one-Dream></one-Dream>'
             })
-        .state('connect', {
-          url: '/connect',
-          template: '<connect></connect>'
+        .state('cloud', {
+          url: '/cloud',
+          template: '<cloud></cloud>'
         })
           .state('publicDream', {
-              url: '/connect/:dreamId',
+              url: '/cloud/:dreamId',
               template: '<public-Dream></public-Dream>'
             });
 

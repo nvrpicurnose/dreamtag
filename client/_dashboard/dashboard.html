@@ -31,10 +31,10 @@
 		</div>
 	</label>
 	-->
-	<input type='date' ng-model='dashboard.timeLock' value='new Date()'>
 
 	<div class='item range range-royal'>
-		<b>Locked for: &nbsp; {{dashboard.daysAway}} &nbsp; Days</b> &nbsp; &nbsp;
+		<b>Locked until: &nbsp;</b>
+		<input type='date' ng-model='dashboard.timeLock' value='new Date()'>
 		<i class='ion-calendar'></i>
 		<input type='range' min='0' max='100' ng-model='dashboard.daysAway' ng-change='dashboard.calculate_timeLock()'>
 		<i class='ion-unlocked'></i>

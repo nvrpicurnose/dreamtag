@@ -1,8 +1,8 @@
-angular.module('DreamTag').directive('connect', function(){
+angular.module('DreamTag').directive('cloud', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'client/_connect/connect.html',
-		controllerAs: 'connect',
+		templateUrl: 'client/_cloud/cloud.html',
+		controllerAs: 'cloud',
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);
 
@@ -15,7 +15,8 @@ angular.module('DreamTag').directive('connect', function(){
 						{$and: [
 							{"timeLock":{"$lte": new Date()}}, 
 							{"public":true}
-						]}
+						]},
+						{sort: {date:-1}}
 					);
 				},
 				locked_dreams_public: () => {
@@ -24,7 +25,9 @@ angular.module('DreamTag').directive('connect', function(){
 							{"timeLock":{"$gt": new Date()}}, 
 							{"public":true}
 						]}, 
-						{title:1, date:1, timeLock:1});
+						{title:1, date:1, timeLock:1},
+						{sort: {timeLock:-1}}
+					);
 				},
 				isLoggedIn: () => {
 					return Meteor.userId() !== null;

@@ -14,7 +14,8 @@ angular.module('DreamTag').directive('vault', function(){
 						{$and: [
 							{"timeLock":{"$lte": new Date()}}, 
 							{"owner": Meteor.user()._id}
-						]} 
+						]},
+						{sort: {date:-1}}
 					); 
 				},
 				locked_dreams_mine: () => {
@@ -23,7 +24,8 @@ angular.module('DreamTag').directive('vault', function(){
 							{"timeLock":{"$gt": new Date()}}, 
 							{"owner":Meteor.user()._id}
 						]},
-						{title:1, date:1, timeLock:1}
+						{title:1, date:1, timeLock:1},
+						{sort: {timeLock:-1}}
 					);
 				},
 				isLoggedIn: () => {

@@ -5,13 +5,13 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 - Users [DONE]
 - Audio recording
 - Tagging [DONE]
-- Dream access-restrictions
+- Dream access-restrictions [DONE]
 - Detailed Dream
 - styling with ionic (https://github.com/netanelgilad/meteor-ionic-example)
 
 ============ MINOR FUNCTIONALITY ============
-- Public/Private Dreams
-- Friends
+- Public/Private Dreams [DONE]
+- Friends [DONE]
 - password lock dreams
 
 ============ REFINEMENT ============
@@ -25,8 +25,6 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 
 ============ STYLING ============
 - implement datepicker library
-- rename tab friends > cloud & change icon
-- find new icon for tab vault
 
 
 ============ MAJOR BUGS ============
@@ -37,3 +35,4 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 ============ MINOR BUGS ============
 - empty tags after submitting dream
 - delete confirmation popup
+- sort dreams by date
