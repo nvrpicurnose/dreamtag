@@ -1,8 +1,8 @@
 Dreams = new Mongo.Collection('dreams');
 
 Dreams.allow({
-	insert: function(dream){
-		return true;
+	insert: function(userId, dream){
+		return userId;
 	},
 	update: function(){
 		// to edit dream
