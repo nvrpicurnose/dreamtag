@@ -16,6 +16,9 @@ angular.module('DreamTag').directive('dashboard', function(){
 			this.helpers({
 				isLoggedIn: () => {
 					return Meteor.userId() !== null;
+				},
+				currentUser: () => {
+					return Meteor.userId();
 				}
 			})
 
@@ -28,8 +31,9 @@ angular.module('DreamTag').directive('dashboard', function(){
 				this.currentDream.timeLock = this.timeLock;
 				console.log(this.currentDream);
 				Dreams.insert(this.currentDream);
+				this.timeLock = new Date();
 				this.now = new Date();
-				this.currentDream = {"date":new Date(), "timeLock": this.now, "tags":"", "public":false};
+				this.currentDream = {"date":new Date(), "tags":"", "public":false};
 			};
 		}
 	}
