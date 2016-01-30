@@ -10,14 +10,18 @@ angular.module("DreamTag")
           url: '/vault',
           template: '<vault></vault>'
           })
-          .state('one-dream', {
+          .state('oneDream', {
               url: '/vault/:dreamId',
-              template: '<one-dream></one-dream>'
+              template: '<one-Dream></one-Dream>'
             })
         .state('connect', {
           url: '/connect',
           template: '<connect></connect>'
-        });
+        })
+          .state('publicDream', {
+              url: '/connect/:dreamId',
+              template: '<public-Dream></public-Dream>'
+            });
 
     $urlRouterProvider.otherwise("/dashboard");
   });

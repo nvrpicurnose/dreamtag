@@ -6,11 +6,30 @@ angular.module('DreamTag').directive('dashboard', function(){
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);
 			this.subscribe('');
-			this.currentDream = {"date":new Date(), "timeLock": new Date()};
+
+			this.timeLock = new Date();
+				this.now = new Date();
+				this.daysAway = 7;
+
+			this.currentDream = {"date":new Date(), "timeLock": this.timeLock, "tags":"", "public":false};
+
+			this.helpers({
+				isLoggedIn: () => {
+					return Meteor.userId() !== null;
+				}
+			})
 
 			this.addDream = () => {
+				if (Meteor.userId() !== null){
+					this.currentDream.owner = Meteor.user()._id;
+				}else{
+					this.currentDream.owner = "Anonymous";
+				}
+				this.currentDream.timeLock = this.timeLock;
+				console.log(this.currentDream);
 				Dreams.insert(this.currentDream);
-				this.currentDream = {"date":new Date(), "timeLock":new Date(), "tags":""};
+				this.now = new Date();
+				this.currentDream = {"date":new Date(), "timeLock": this.now, "tags":"", "public":false};
 			};
 		}
 	}

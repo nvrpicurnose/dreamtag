@@ -5,19 +5,33 @@ angular.module('DreamTag').directive('vault', function(){
 		controllerAs: 'vault',
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);
-			this.subscribe('unlocked-dreams');
-			this.subscribe('locked-dreams');
+			this.subscribe('locked-dreams-mine');
+			this.subscribe('unlocked-dreams-mine');
 
 			this.helpers({
-				unlocked_dreams: () => {
-					return Dreams.find({"timeLock": {"$lte": new Date()}});
+				unlocked_dreams_mine: () => {
+					return Dreams.find(
+						{$and: [
+							{"timeLock":{"$lte": new Date()}}, 
+							{"owner": Meteor.user()._id}
+						]} 
+					); 
 				},
-				locked_dreams: () => {
-					return Dreams.find({timeLock:{"$gt": new Date()}}, {title:1, date:1, timeLock:1});
+				locked_dreams_mine: () => {
+					return Dreams.find(
+						{$and: [
+							{"timeLock":{"$gt": new Date()}}, 
+							{"owner":Meteor.user()._id}
+						]},
+						{title:1, date:1, timeLock:1}
+					);
+				},
+				isLoggedIn: () => {
+					return Meteor.userId() !== null;
 				}
 			});
 
-			this.deleteDream = function(dream){
+			this.deleteDream = (dream)=>{
 				Dreams.remove({_id: dream._id});
 			};
 		}

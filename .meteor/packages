@@ -22,3 +22,7 @@ angularui:angular-ui-router
 ajduke:bootstrap-tagsinput
 rajit:bootstrap3-datepicker
 driftyco:ionic
+tonekk:angular-moment
+accounts-google
+accounts-ui
+dotansimha:accounts-ui-angular

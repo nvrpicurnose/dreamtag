@@ -2,7 +2,7 @@
 See live at: http://dreamtag_v0-1-1.meteor.com
 
 ============ CORE FUNCTIONALITY ============
-- Users 
+- Users [DONE]
 - Audio recording
 - Tagging [DONE]
 - Dream access-restrictions
@@ -17,7 +17,7 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 ============ REFINEMENT ============
 - Geolocation
 - dream & friend comparisons
-- Add Moment.js for relative time
+- Add Moment.js for relative time [DONE]
 
 ============ BONUS CONTENT ==============
 - Save to Google Drive
@@ -25,12 +25,14 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 
 ============ STYLING ============
 - implement datepicker library
+- rename tab friends > cloud & change icon
+- find new icon for tab vault
 
 
 ============ MAJOR BUGS ============
 - tags component breaks when switching pages
-- locked dreams not showing new locked dreams (broken calender component?)
-
+- setting days until timeLock
+- vault page needs to be scrollable
 
 ============ MINOR BUGS ============
 - empty tags after submitting dream

@@ -19,7 +19,8 @@
 		<span class="input-label">Tags</span>
 		<input type="text" value="" ng-model='dashboard.currentDream.tags' data-role="tagsinput"  style='min-width:100vw; max-width:100vw;'/>
 	</label>
-
+	
+	<!--
 	<label class='item item-input item-stacked-label'>
 		<span class="input-label">Time Lock Date</span>
 		<div class="input-group date" data-provide="datepicker">
@@ -29,18 +30,29 @@
 		    </div>
 		</div>
 	</label>
+	-->
+	<input type='date' ng-model='dashboard.timeLock' value='new Date()'>
+
+	<div class='item range range-royal'>
+		<b>Locked for: &nbsp; {{dashboard.daysAway}} &nbsp; Days</b> &nbsp; &nbsp;
+		<i class='ion-calendar'></i>
+		<input type='range' min='0' max='100' ng-model='dashboard.daysAway' ng-change='dashboard.calculate_timeLock()'>
+		<i class='ion-unlocked'></i>
+	</div>
 
 	<div class='item item-toggle item-stacked-label'>
-		<b>SET PRIVATE?</b>
+		<b>PUBLIC?</b>
 		<label class='toggle toggle-royal'>
-			<input type='checkbox' ng-model='dashboard.currentDream.private' value='checked' />
+			<input type='checkbox' ng-model='dashboard.currentDream.public' value='checked' />
 			<div class='track'>
 				<div class='handle'></div>
 			</div>
 		</label>
 	</div>
 
-	<button class='button button-royal button-block' ng-click='dashboard.addDream()'>ADD TO DREAM VAULT</button>
+	<button class='button button-royal button-block' ng-show='dashboard.isLoggedIn' ng-click='dashboard.addDream()'>ADD TO DREAM VAULT</button>
+	<button class='button button-royal button-block' ng-show='!dashboard.isLoggedIn' ng-click='dashboard.addDream()'>POST DREAM AS ANONYMOUS</button>
+	<login-buttons ng-show='!dashboard.isLoggedIn'></login-buttons>
 
 	<div class='card'>
 		<div class='item item-text-wrap'>

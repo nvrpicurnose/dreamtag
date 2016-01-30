@@ -1,1 +1,27 @@
-FRIENDS
+<div class="bar bar-header bar-balanced">
+  <h1 class="title">Friends Cloud</h1>
+</div>
+<div style='min-height:10vh; max-height:10vh; min-width:100vw; max-width:100vw;'></div>
+<login-buttons></login-buttons>
+
+<ul class='list'>
+	<li class='item item-divider'>Public Dreams</li>
+	<li class='item item-button-right' ng-repeat="dream in connect.unlocked_dreams_public">
+		{{dream.title}}
+
+		<div class='buttons'>
+			<button class='button button-balanced button-large' ui-sref="publicDream({dreamId: dream._id})">View</button>
+			<button class='button button-calm button-large'>DREAMT &nbsp;  <b><span am-time-ago="dream.date"></span></b></button>
+		</div>
+	</li>
+</ul>
+
+<ul class='list'>
+	<li class='item item-divider'>Public Locked Dreams</li>
+	<li class='item item-button-right' ng-repeat='dream in connect.locked_dreams_public'>
+		{{dream.title}}
+		<button class='button button-royal button-large'>
+			Unlocked  &nbsp; <b><span am-time-ago="dream.timeLock"></span></b>
+		</button>
+	</li>
+</ul>

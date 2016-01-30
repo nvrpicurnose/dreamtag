@@ -7,7 +7,7 @@ Dreams.allow({
 	update: function(){
 		// to edit dream
 	},
-	remove: function(dream){
-		return true;
+	remove: function(userId, dream){
+		return userId;
 	}
 });
