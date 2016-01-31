@@ -1,13 +1,24 @@
-Meteor.publish("locked-dreams-mine", function(options){
-	
+Meteor.publish("locked-cloud", function(options, searchString){
+
 	let selector = {
 		$and: [
-			{"timeLock":{"$gt": new Date()}}, 
-			{"owner":this.userId}
+			{"public":true}, 
+			{"timeLock":{"$gt": new Date()}}
 		]
 	};
-	
+
+	let projection = {
+		fields:{
+			"title":1, 
+			"date":1, 
+			"timeLock":1, 
+			"owner":1
+		}
+	};
+
 	// Counts is part of an installed API that allows us to count the total # of records that match our query without having to go through the entire Dreams db
 	Counts.publish(this, 'numberOfDreams', Dreams.find(selector), {noReady:true});
 	return Dreams.find(selector, options);
 });
+
+// {title:1, date:1, timeLock:1, owner:1}

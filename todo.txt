@@ -27,6 +27,8 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 - tags component breaks when switching pages
 - setting days until timeLock
 - vault page needs to be scrollable
+- .find(query, projection) is needed for selective data query, 
+		but does not play well with .find(query, options)
 
 ============ MINOR BUGS ============
 - empty tags after submitting dream

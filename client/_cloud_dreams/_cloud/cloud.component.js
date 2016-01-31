@@ -1,7 +1,7 @@
 angular.module('DreamTag').directive('cloud', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'client/_public_dreams/_cloud/cloud.html',
+		templateUrl: 'client/_cloud_dreams/_cloud/cloud.html',
 		controllerAs: 'cloud',
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);

@@ -1,7 +1,7 @@
 angular.module('DreamTag').directive('unlockedCloud', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'client/_public_dreams/_unlocked_cloud/unlocked_cloud.html',
+		templateUrl: 'client/_cloud_dreams/_unlocked_cloud/unlocked_cloud.html',
 		controllerAs: 'unlockedCloud',
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);
@@ -10,7 +10,7 @@ angular.module('DreamTag').directive('unlockedCloud', function(){
 			this.page = 1;
 
 			this.subscribe('users');
-			this.subscribe('unlocked-dreams-public', () => {
+			this.subscribe('unlocked-cloud', () => {
 				return [{
 					limit: parseInt(this.perPage),
 					skip: parseInt((this.getReactively('page') -1)*this.perPage)

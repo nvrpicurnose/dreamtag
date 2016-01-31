@@ -1,7 +1,7 @@
 angular.module('DreamTag').directive('twoDream', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'client/_public_dreams/_twoDream/twoDream.html',
+		templateUrl: 'client/_cloud_dreams/_twoDream/twoDream.html',
 		controllerAs: 'twoDream',
 		controller: function($scope, $reactive, $stateParams){
 			$reactive(this).attach($scope);

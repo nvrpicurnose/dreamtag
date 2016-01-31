@@ -1,7 +1,7 @@
 angular.module('DreamTag').directive('unlockedVault', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'client/_private_dreams/_unlocked_vault/unlocked_vault.html',
+		templateUrl: 'client/_vault_dreams/_unlocked_vault/unlocked_vault.html',
 		controllerAs: 'unlockedVault',
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);
@@ -9,7 +9,7 @@ angular.module('DreamTag').directive('unlockedVault', function(){
 			this.perPage = 2;
 			this.page = 1;
 			
-			this.subscribe('unlocked-dreams-mine', ()=>{
+			this.subscribe('unlocked-vault', ()=>{
 				return [
 					{
 						limit: parseInt(this.perPage),

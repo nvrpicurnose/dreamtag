@@ -1,9 +1,9 @@
-Meteor.publish("unlocked-dreams-mine", function(options){
-	
+Meteor.publish("unlocked-cloud", function(options){
+
 	let selector = {
 		$and: [
-			{"timeLock":{"$lte": new Date()}}, 
-			{"owner":this.userId}
+			{"public":true}, 
+			{"timeLock":{"$lte": new Date()}}
 		]
 	};
 	

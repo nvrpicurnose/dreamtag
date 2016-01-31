@@ -1,7 +1,7 @@
 angular.module('DreamTag').directive('lockedCloud', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'client/_public_dreams/_locked_cloud/locked_cloud.html',
+		templateUrl: 'client/_cloud_dreams/_locked_cloud/locked_cloud.html',
 		controllerAs: 'lockedCloud',
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);
@@ -9,14 +9,12 @@ angular.module('DreamTag').directive('lockedCloud', function(){
 			this.perPage = 2;
 			this.page = 1;
 
+			this.searchText = '';
+
 			this.subscribe('users');
-			this.subscribe('locked-dreams-public', () => {
+			this.subscribe('locked-cloud', () => {
 				return [
 					{
-						title:1, 
-						date:1, 
-						timeLock:1, 
-						owner:1,
 						limit: parseInt(this.perPage),
 						skip: parseInt((this.getReactively('page') -1)*this.perPage)
 					}
