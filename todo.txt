@@ -3,7 +3,6 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 
 ============ CORE FUNCTIONALITY ============
 - Audio recording
-- Detailed Dream
 - reactive search (routing setup error?)
 - search public dreams by tag
 
@@ -42,3 +41,4 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 - Users [DONE]
 - Tagging [DONE]
 - Pagination of cloud public dreams [DONE]
+- Detailed Dream Page [DONE]
