@@ -5,8 +5,6 @@ angular.module('DreamTag').directive('twoDream', function(){
 		controllerAs: 'twoDream',
 		controller: function($scope, $reactive, $stateParams){
 			$reactive(this).attach($scope);
-			this.subscribe('locked-dreams-public');
-			this.subscribe('unlocked-dreams-public');
 
 			this.helpers({
 				dream: ()=> {

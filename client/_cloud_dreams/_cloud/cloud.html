@@ -8,9 +8,11 @@
 </div>
 
 <div class='publicprivatebuttons'>
-	<button class='button button-balanced' ng-click='cloud.togglePubPriv(false)'>SHOW PUBLIC UNLOCKED</button>
-	<button class='button button-dark' ng-click='cloud.togglePubPriv(true)'>SHOW PUBLIC LOCKED</button>
+	<button class='button button-balanced' ui-sref='cloud.unlockedCloud'>SHOW PUBLIC UNLOCKED</button>
+	<button class='button button-dark' ui-sref='cloud.lockedCloud'>SHOW PUBLIC LOCKED</button>
 </div>
 
-<unlocked-cloud ng-show='!cloud.PubPriv_toggle'></unlocked-cloud>
-<locked-cloud ng-show='cloud.PubPriv_toggle'></locked-cloud>
+
+<div ui-view>
+	<unlocked-cloud></unlocked-cloud>
+</div>

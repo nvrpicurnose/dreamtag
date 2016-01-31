@@ -7,6 +7,7 @@ Meteor.publish("locked-cloud", function(options, searchString){
 		]
 	};
 
+	// should be moved into options object
 	let projection = {
 		fields:{
 			"title":1, 

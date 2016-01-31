@@ -11,12 +11,6 @@ angular.module('DreamTag').directive('vault', function(){
 					return Meteor.userId() !== null;
 				}
 			});
-
-			this.PubPriv_toggle = false;
-
-			this.togglePubPriv = (tf) => {
-				this.PubPriv_toggle = tf;
-			}
 		}
 	}
 });

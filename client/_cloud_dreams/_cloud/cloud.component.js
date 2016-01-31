@@ -4,13 +4,7 @@ angular.module('DreamTag').directive('cloud', function(){
 		templateUrl: 'client/_cloud_dreams/_cloud/cloud.html',
 		controllerAs: 'cloud',
 		controller: function($scope, $reactive){
-			$reactive(this).attach($scope);
 
-			this.PubPriv_toggle = false;
-
-			this.togglePubPriv = (tf) => {
-				this.PubPriv_toggle = tf;
-			}
 		}
 	}
 });

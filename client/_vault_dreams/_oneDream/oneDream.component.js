@@ -5,8 +5,6 @@ angular.module('DreamTag').directive('oneDream', function(){
 		controllerAs: 'oneDream',
 		controller: function($scope, $reactive, $stateParams){
 			$reactive(this).attach($scope);
-			this.subscribe('locked-dreams-mine');
-			this.subscribe('unlocked-dreams-mine');
 
 			this.helpers({
 				dream: ()=> {

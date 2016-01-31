@@ -9,10 +9,10 @@
 <div ng-show='!vault.isLoggedIn' class="alert alert-info" role="alert">Login or create an account to access your Vault.</div> 
 
 <div class='publicprivatebuttons'>
-	<button class='button button-balanced' ng-click='vault.togglePubPriv(false)'>SHOW UNLOCKED</button>
-	<button class='button button-dark' ng-click='vault.togglePubPriv(true)'>SHOW LOCKED</button>
+	<button class='button button-balanced' ui-sref='vault.unlockedVault'>SHOW UNLOCKED</button>
+	<button class='button button-dark' ui-sref='vault.lockedVault'>SHOW LOCKED</button>
 </div>
 
-
-<unlocked-vault ng-show='!vault.PubPriv_toggle'></unlocked-vault>
-<locked-vault ng-show='vault.PubPriv_toggle'></locked-vault>
+<div ui-view>
+	<unlocked-vault></unlocked-vault>
+</div>
