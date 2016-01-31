@@ -5,7 +5,7 @@
 		{{dream.title}}
 
 		<div class='buttons'>
-			<button class='button button-balanced button-large' ui-sref="unlockedVault({dreamId: dream._id})">View</button>
+			<button class='button button-balanced button-large' ui-sref="dream({dreamId: dream._id})">View</button>
 			<button class='button button-assertive button-large' ng-click='unlockedVault.deleteDream(dream)' ng-show='unlockedVault.isLoggedIn'><span class='glyphicon glyphicon-trash'></span></button>
 			<button class='button button-calm button-large'>DREAMT &nbsp;  <b><span am-time-ago="dream.date"></span></b></button>
 		</div>
@@ -13,3 +13,5 @@
 </ul>
 <dir-pagination-controls on-page-change="unlockedVault.pageChanged(newPageNumber)"></dir-pagination-controls>
 </div>
+
+<div ui-view='oneDreamView'></div>

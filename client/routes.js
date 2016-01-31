@@ -21,11 +21,6 @@ angular.module("DreamTag")
               url: '/unlockedVault',
               template: '<unlocked-vault></unlocked-vault>'
             })
-              .state('vault.unlockedVault.oneDream', {
-                  url: '/:dreamId',
-                  template: '<one-Dream></one-Dream>'
-                })
-
 
         .state('cloud', {
           url: '/cloud',
@@ -39,10 +34,10 @@ angular.module("DreamTag")
               url: '/unlockedCloud',
               template: '<unlocked-cloud></unlocked-cloud>'
             })
-              .state('cloud.unlockedCloud.twoDream', {
-                  url: '/:dreamId',
-                  templateUrl: 'client/_cloud_dreams/_twoDream/twoDream.html'
-                });
-
+        
+        .state('dream', {
+          url: '/dream/:dreamId',
+          template: '<dream></dream>'
+        })
     $urlRouterProvider.otherwise("/dashboard");
   });

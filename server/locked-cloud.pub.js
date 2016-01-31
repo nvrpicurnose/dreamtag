@@ -1,4 +1,4 @@
-Meteor.publish("locked-cloud", function(options, searchString){
+Meteor.publish("locked-cloud", function(options){
 
 	let selector = {
 		$and: [

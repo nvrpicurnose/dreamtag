@@ -9,8 +9,6 @@ angular.module('DreamTag').directive('lockedCloud', function(){
 			this.perPage = 2;
 			this.page = 1;
 
-			this.searchText = '';
-
 			this.subscribe('users');
 			this.subscribe('locked-cloud', () => {
 				return [

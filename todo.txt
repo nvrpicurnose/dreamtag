@@ -4,7 +4,7 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 ============ CORE FUNCTIONALITY ============
 - Audio recording
 - Detailed Dream
-- reactive search
+- reactive search (routing setup error?)
 - search public dreams by tag
 
 ============ MINOR FUNCTIONALITY ============
@@ -26,15 +26,14 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 ============ MAJOR BUGS ============
 - tags component breaks when switching pages
 - setting days until timeLock
-- vault page needs to be scrollable
-- .find(query, projection) is needed for selective data query, 
-		but does not play well with .find(query, options)
+- routing into detailed dream page doesn't work
 
 ============ MINOR BUGS ============
 - empty tags after submitting dream
 - delete confirmation popup
 - sort dreams by date
-- display dream owner for email vs gmail vs facebook
+- .find(query, projection) is needed for selective data query, 
+		but does not play well with .find(query, options)
 
 ============ COMPLETED ============
 - Dream access-restrictions [DONE]
