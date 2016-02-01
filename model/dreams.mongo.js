@@ -5,7 +5,7 @@ Dreams.allow({
 		return userId;
 	},
 	update: function(){
-		// to edit dream
+		return userId && dream.owner == userId;
 	},
 	remove: function(userId, dream){
 		return userId && dream.owner == userId;
