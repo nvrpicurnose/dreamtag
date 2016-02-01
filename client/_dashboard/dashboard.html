@@ -1,22 +1,20 @@
 <div class='bar bar-header bar-royal'>
-	<h1 class='title'>Dream Dashboard</h1>
+	<h1 class='title' style='font-weight:bold;'>Dream Dashboard</h1>
 </div>
 
-<div class='item' style='margin-top:7vh;'>Good Morning {{dashboard.currentUser}}, the time now is {{dashboard.currentDream.date}}</div>
-
-<div style='font-size:1.5em;font-weight:bold;'>
-	<login-buttons ng-show='!dashboard.isLoggedIn'></login-buttons>
-</div>
-
-<div class='list' style='margin-top:3vh;'>
+<div class='list' style='margin-top:7vh;'>
 	<label class='item item-input item-stacked-label'>
-		<span class="input-label">Dream Title</span>
-		<input type='text' id='currentDream_title_input' ng-model='dashboard.currentDream.title'/>
+		<input type='text' id='currentDream_title_input' ng-model='dashboard.currentDream.title' placeholder='Dream Title' style='font-size:1.4em; height:5vh; width:75%; float:left; display:inline-block; margin-top:1%;' />
+		<div style='float:right; font-weight:bold; width:25%;display:inline-block;'>
+			<div style='float:right;'>
+				<span style='font-size:2em;'>{{dashboard.timeNowIs}}</span>
+				<span style='font-size:1em;margin-right:3%;'>{{dashboard.dateNowIs}}</span>
+			</div>
+		</div>
 	</label>
 
 	<label class='item item-input item-stacked-label'>
-		<span class="input-label">Memo Pad</span>
-		<input type='text' id='currentDream_text_input' ng-model='dashboard.currentDream.text' style='height:10vh'/><br/><br/>
+		<input type='text' id='currentDream_text_input' ng-model='dashboard.currentDream.text' placeholder='Memo Text' style='height:10vh; font-size:1em;'/>
 	</label>
 
 	<label class='item item-input item-stacked-label'>
@@ -36,12 +34,10 @@
 	</label>
 	-->
 
-	<div class='item range range-royal'>
+	<div class='item item-input'>
 		<b>Locked until: &nbsp;</b>
-		<input type='date' ng-model='dashboard.timeLock' value='new Date()'>
 		<i class='ion-calendar'></i>
-		<input type='range' min='0' max='100' ng-model='dashboard.daysAway' ng-change='dashboard.calculate_timeLock()'>
-		<i class='ion-unlocked'></i>
+		<input type='date' ng-model='dashboard.timeLock' value='new Date()' style='margin-left:2%;'>
 	</div>
 
 	<div class='item item-toggle item-stacked-label'>
@@ -57,10 +53,4 @@
 	<button class='button button-royal button-block' ng-show='dashboard.isLoggedIn' ng-click='dashboard.addDream()'>ADD TO DREAM VAULT</button>
 	<button class='button button-royal button-block' ng-show='!dashboard.isLoggedIn' >LOG IN OR CREATE AN ACCOUNT TO POST</button>
 
-	<div class='card'>
-		<div class='item item-text-wrap'>
-			<b>Your current Dream:</b><br/>
-			{{dashboard.currentDream}}
-		</div>
-	</div>
 </div>

@@ -11,6 +11,9 @@ angular.module('DreamTag').directive('dashboard', function(){
 				this.now = new Date();
 				this.daysAway = 7;
 
+			this.timeNowIs = moment(this.now).format('h:mm a');
+			this.dateNowIs = moment(this.now).format('MMM Do YYYY');
+
 			this.currentDream = {"date":new Date(), "timeLock": this.timeLock, "tags":"", "public":false};
 
 			this.helpers({

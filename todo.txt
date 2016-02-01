@@ -8,7 +8,7 @@ See live at: http://dreamtag_v0-1-1.meteor.com
 
 ============ MINOR FUNCTIONALITY ============
 - Friends 
-- password lock dreams
+- password lock dreams 
 
 ============ REFINEMENT ============
 - Geolocation

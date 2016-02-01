@@ -1,13 +1,17 @@
-
 	<ul class='list'>
-		<li class='item item-divider'>Unlocked Dreams</li>
-		<li class='item item-button-right' dir-paginate='dream in unlockedCloud.unlocked_dreams_public | itemsPerPage: unlockedCloud.perPage' total-items='unlockedCloud.dreamsCount'>
-			{{dream.title}}
-
-			<div class='buttons'>
-				<button class='button button-balanced button-large' ui-sref="dream({dreamId: dream._id})">View</button>
-				<button class='button button-calm button-large'>DREAMT &nbsp;  <b><span am-time-ago="dream.date"></span></b> by {{unlockedCloud.getDreamCreator(dream)}}</button>
-			</div>
+		<li class='item item-divider'>
+			<span style='width:50%; display:inline-block; font-weight:bold;font-size:2.2em;'><h1>Unlocked Dreams</h1></span>
+			<span style='width:50%; display:inline-block;'>
+				<dir-pagination-controls on-page-change="unlockedCloud.pageChanged(newPageNumber)" style='float:right;'></dir-pagination-controls>
+			</span>
 		</li>
+		<a class='item item-button-right' dir-paginate='dream in unlockedCloud.unlocked_dreams_public | itemsPerPage: unlockedCloud.perPage' total-items='unlockedCloud.dreamsCount' ui-sref="dream({dreamId: dream._id})">
+			<div style='display:inline-block;'>
+				<span style='font-size:1.2em; font-weight:bold;'>{{dream.title}}</span><br/> 
+				<i class='ion ion-locked'></i> &nbsp; posted by {{unlockedCloud.getDreamCreator(dream)}}
+			</div>
+			<button class='button button-balanced' style='float:right; display:inline-block;margin-top:1%;'>
+				View  &nbsp; <b><span am-time-ago="dream.timeLock"></span></b>
+			</button>
+		</a>
 	</ul>
-	<dir-pagination-controls on-page-change="unlockedCloud.pageChanged(newPageNumber)"></dir-pagination-controls>

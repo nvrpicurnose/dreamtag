@@ -1,11 +1,19 @@
 
 	<ul class='list'>
-		<li class='item item-divider'>Locked Dreams</li>
-		<li class='item item-button-right' dir-paginate='dream in lockedCloud.locked_dreams_public | itemsPerPage: lockedCloud.perPage' total-items='lockedCloud.dreamsCount'>
-			{{dream.title}}
-			<button class='button button-royal button-large'>
-				Unlocked  &nbsp; <b><span am-time-ago="dream.timeLock"></span></b> posted by {{lockedCloud.getDreamCreator(dream)}}
-			</button>
+		<li class='item item-divider'>
+			<span style='width:50%; display:inline-block; font-weight:bold;font-size:2.2em;'><h1>Locked Dreams</h1></span>
+			<span style='width:50%; display:inline-block;'>
+				<dir-pagination-controls on-page-change="lockedCloud.pageChanged(newPageNumber)" style='float:right;'></dir-pagination-controls>
+			</span>
 		</li>
+			<div class='item item-icon-left' dir-paginate='dream in lockedCloud.locked_dreams_public | itemsPerPage: lockedCloud.perPage' total-items='lockedCloud.dreamsCount'>
+			<div style='display:inline-block;'>
+				<span style='font-size:1.2em; font-weight:bold;'>{{dream.title}}</span><br/> 
+				<i class='ion ion-locked'></i> &nbsp; posted by {{lockedCloud.getDreamCreator(dream)}}
+			</div>
+				<button class='button button-royal' style='float:right; display:inline-block;'>
+				Unlocked  &nbsp; <b><span am-time-ago="dream.timeLock"></span></b>
+				</button>
+			</div>
 	</ul>
 	<dir-pagination-controls on-page-change="lockedCloud.pageChanged(newPageNumber)"></dir-pagination-controls>

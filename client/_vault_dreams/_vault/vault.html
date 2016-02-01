@@ -1,18 +1,16 @@
 <div class='bar bar-header bar-calm'>
-	<h1 class='title'>My Dream Vault</h1>
+	<h1 class='title' style='font-weight:bold;'>My Dream Vault</h1>
 </div>
 <div style='min-height:10vh; max-height:10vh; min-width:100vw; max-width:100vw;'></div>
 
-<div style='font-size:2em;font-weight:bold;'>
-	<login-buttons></login-buttons>
-</div>
 <div ng-show='!vault.isLoggedIn' class="alert alert-info" role="alert">Login or create an account to access your Vault.</div> 
 
-<div class='publicprivatebuttons'>
-	<button class='button button-balanced' ui-sref='vault.unlockedVault'>SHOW UNLOCKED</button>
-	<button class='button button-dark' ui-sref='vault.lockedVault'>SHOW LOCKED</button>
-</div>
+<ul class='publicprivatebuttons nav nav-tabs'>
+	<li role="presentation"><login-buttons></login-buttons></li>
+	<li role="presentation" style='float:right;'><a ui-sref='vault.lockedVault'>UPCOMING DREAMS</a></li>
+	<li role="presentation" style='float:right;'><a ui-sref='vault.unlockedVault'>MY DREAMS</a></li>
+</ul>
 
-<div ui-view>
+<div ng-show='vault.isLoggedIn' ui-view>
 	<unlocked-vault></unlocked-vault>
 </div>

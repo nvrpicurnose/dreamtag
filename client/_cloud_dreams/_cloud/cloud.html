@@ -1,16 +1,14 @@
 <div class="bar bar-header bar-balanced">
-  <h1 class="title">Public Dream Cloud</h1>
+  <h1 class="title" style='font-weight:bold;'>Public Dream Cloud</h1>
 </div>
 <div style='min-height:10vh; max-height:10vh; min-width:100vw; max-width:100vw;'></div>
 
-<div style='font-size:2em;font-weight:bold;'>
-	<login-buttons></login-buttons>
-</div>
 
-<div class='publicprivatebuttons'>
-	<button class='button button-balanced' ui-sref='cloud.unlockedCloud'>SHOW PUBLIC UNLOCKED</button>
-	<button class='button button-dark' ui-sref='cloud.lockedCloud'>SHOW PUBLIC LOCKED</button>
-</div>
+<ul class='publicprivatebuttons nav nav-tabs'>
+	<li role="presentation"><login-buttons></login-buttons></li>
+	<li role="presentation" style='float:right;'><a ui-sref='cloud.lockedCloud'>LOCKED DREAMS</a></li>
+	<li role="presentation" style='float:right;'><a ui-sref='cloud.unlockedCloud'>UNLOCKED DREAMS</a></li>
+</ul>
 
 
 <div ui-view>

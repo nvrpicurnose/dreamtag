@@ -6,7 +6,7 @@ angular.module('DreamTag').directive('unlockedVault', function(){
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);
 
-			this.perPage = 2;
+			this.perPage = 4;
 			this.page = 1;
 			
 			this.subscribe('unlocked-vault', ()=>{
@@ -37,7 +37,10 @@ angular.module('DreamTag').directive('unlockedVault', function(){
 			});
 
 			this.deleteDream = (dream)=>{
-				Dreams.remove({_id: dream._id});
+				var confirmation = confirm("Are you sure you want to delete this dream?");
+				if (confirmation){
+					Dreams.remove({_id: dream._id});
+				}
 			};
 
 			this.pageChanged = (newPage) => {

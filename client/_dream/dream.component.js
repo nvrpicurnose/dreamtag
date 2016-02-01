@@ -14,11 +14,19 @@ angular.module('DreamTag').directive('dream', function(){
 				currentDream: ()=> {
 					return Dreams.findOne({_id: $stateParams.dreamId})
 				}
-			})
+			});
 
 			this.originalPoster=()=>{
 				return this.currentDream.owner == Meteor.user()._id ;
-			}
+			};
+
+			this.deleteDream = (dream)=>{
+				var confirmation = confirm("Are you sure you want to delete this dream?");
+				if (confirmation){
+					Dreams.remove({_id: dream._id});
+					window.location.assign("/");
+				}
+			};
 		}
 	}
 });

@@ -6,7 +6,7 @@ angular.module('DreamTag').directive('unlockedCloud', function(){
 		controller: function($scope, $reactive){
 			$reactive(this).attach($scope);
 
-			this.perPage = 2;
+			this.perPage = 4;
 			this.page = 1;
 
 			this.subscribe('users');
