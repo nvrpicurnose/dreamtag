@@ -24,7 +24,7 @@ angular.module('DreamTag').directive('unlockedCloud', function(){
 							{"timeLock":{"$lte": new Date()}}, 
 							{"public":true}
 						]},
-						{sort: {date:-1}}
+						{sort: {date:1}}
 					);
 				},
 				isLoggedIn: () => {

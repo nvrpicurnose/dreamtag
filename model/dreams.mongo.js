@@ -4,7 +4,7 @@ Dreams.allow({
 	insert: function(userId, dream){
 		return userId;
 	},
-	update: function(){
+	update: function(userId, dream, fields, modifier){
 		return userId && dream.owner == userId;
 	},
 	remove: function(userId, dream){

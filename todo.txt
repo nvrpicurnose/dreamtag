@@ -2,37 +2,49 @@
 See live at: http://dreamtag_v0-1-1.meteor.com
 
 ============ CORE FUNCTIONALITY ============
-- Audio recording
 - reactive search (routing setup error?)
 - search public dreams by tag
-
-============ MINOR FUNCTIONALITY ============
 - Friends 
-- password lock dreams 
-
-============ REFINEMENT ============
-- Geolocation
 - dream & friend comparisons
+- sort dreams by date
 
-============ BONUS CONTENT ==============
+============ WEB FUNCTIONALITY ============
 - Save to Google Drive
-- Emoticon tagging
-
-============ STYLING ============
 - implement datepicker library
+
+============ MOBILE FUNCTIONALITY ============
+- Audio recording
+- alarm clock
+
+
+
+
+
+
 
 
 ============ MAJOR BUGS ============
 - tags component breaks when switching pages
 - setting days until timeLock
-- routing into detailed dream page doesn't work
 
 ============ MINOR BUGS ============
 - empty tags after submitting dream
 - delete confirmation popup
-- sort dreams by date
 - .find(query, projection) is needed for selective data query, 
 		but does not play well with .find(query, options)
+
+
+
+
+
+
+
+
+============ OPTIONAL FUNCTIONALITY ============
+- Geolocation
+- password lock dreams 
+- Emoticon tagging
+
 
 ============ COMPLETED ============
 - Dream access-restrictions [DONE]

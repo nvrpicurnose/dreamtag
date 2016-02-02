@@ -1,11 +1,12 @@
 <div ng-show='unlockedVault.isLoggedIn'>
 <ul class='list'>
 	<li class='item item-divider'>
-		<span style='width:50%; display:inline-block; font-weight:bold;font-size:2.2em;'><h1>Locked Dreams</h1></span>
+		<span style='width:50%; display:inline-block; font-weight:bold;font-size:2.2em;'><h1>My Dreams</h1></span>
 		<span style='width:50%; display:inline-block;'>
 			<dir-pagination-controls on-page-change="unlockedVault.pageChanged(newPageNumber)" style='float:right;'></dir-pagination-controls>
 		</span>
 	</li>
+
 	<li class='item item-button-right' dir-paginate='dream in unlockedVault.unlocked_dreams_mine | itemsPerPage: unlockedVault.perPage' total-items='unlockedVault.dreamsCount'>
 		{{dream.title}}
 
@@ -14,6 +15,8 @@
 			<button class='button button-assertive button-large' ng-click='unlockedVault.deleteDream(dream)' ng-show='unlockedVault.isLoggedIn'><span class='glyphicon glyphicon-trash'></span></button>
 			<button class='button button-calm button-large'>DREAMT &nbsp;  <b><span am-time-ago="dream.date"></span></b></button>
 		</div>
+
+		<div ng-if='!unlockedVault.unlocked_dreams_mine.length'>You have not yet posted any accessible Dreams.</div>
 	</li>
 </ul>
 <dir-pagination-controls on-page-change="unlockedVault.pageChanged(newPageNumber)"></dir-pagination-controls>

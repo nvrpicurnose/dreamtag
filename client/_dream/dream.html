@@ -1,5 +1,5 @@
 <div class='bar bar-header bar-royal'>
-	<button class="button icon ion-arrow-left-a" ui-sref='cloud'></button>
+	<button class="button icon ion-arrow-left-a" ng-click='dream.back()'></button>
 	<h1 class='title' style='font-weight:bold;'>Dream</h1>
 </div>
 <div style='min-height:10vh; max-height:10vh; min-width:100vw; max-width:100vw;'></div>
@@ -18,12 +18,10 @@
   	<b>Tags:</b> {{dream.currentDream.tags}}
   </div>
   <div class='item item-divider' ng-if="dream.originalPoster()">
-	<div class='item range range-royal'>
+	<div class='item item-input'>
 		<b>Locked until: &nbsp;</b>
+		<i class='ion-calendar'></i>&nbsp;
 		<input type='date' ng-model='dream.currentDream.timeLock' value='new Date()'>
-		<i class='ion-calendar'></i>
-		<input type='range' min='0' max='100'>
-		<i class='ion-unlocked'></i>
 	</div>
     <div class='item item-toggle item-stacked-label'>
 		<b>PUBLIC?</b>
@@ -35,8 +33,9 @@
 		</label>
     </div>
     <div class='item'>
-		<button class='button button-royal button-block' ng-click='dream.originalPoster()' style='display:inline-block;width:90%;'>UPDATE DREAM</button>
+		<button class='button button-royal button-block' ng-click='dream.save()' style='display:inline-block;width:90%;'>UPDATE DREAM</button>
 	    <button class='button button-assertive button-block' ng-click='dream.deleteDream(dream.currentDream)' style='display:inline-block;width:10%;'><span class='glyphicon glyphicon-trash'></span></button>
 	</div>
+	{{this.currentDream}}
   </div>
 </div>

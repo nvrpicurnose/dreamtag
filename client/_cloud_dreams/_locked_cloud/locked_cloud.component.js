@@ -21,12 +21,12 @@ angular.module('DreamTag').directive('lockedCloud', function(){
 
 			this.helpers({
 				locked_dreams_public: () => {
-					return Dreams.find( 
+					return Dreams.find(
 						{$and: [
-							{"timeLock":{"$gt": new Date()}}, 
-							{"public":true}
+							{"timeLock":{"$gt": new Date()}}
 						]},
-						{date:-1}
+						{title:1, date:1, timeLock:1},
+						{sort: {timeLock:-1}}
 					);
 				},
 				isLoggedIn: () => {

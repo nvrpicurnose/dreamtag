@@ -25,7 +25,7 @@ angular.module('DreamTag').directive('unlockedVault', function(){
 							{"timeLock":{"$lte": new Date()}}, 
 							{"owner": Meteor.user()._id}
 						]},
-						{sort: {date:-1}}
+						{sort: {date:1}}
 					); 
 				},
 				isLoggedIn: () => {
@@ -42,6 +42,8 @@ angular.module('DreamTag').directive('unlockedVault', function(){
 					Dreams.remove({_id: dream._id});
 				}
 			};
+
+			this.unlocked_dreams_minr = "truee";
 
 			this.pageChanged = (newPage) => {
 		    	this.page = newPage;
