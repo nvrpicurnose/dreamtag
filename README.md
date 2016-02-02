@@ -1,1 +1,1 @@
-Working Demo: http://dreamtag_v-0-6-6.meteor.com
+Working Demo: http://dreamtag_v-1-0.meteor.com
